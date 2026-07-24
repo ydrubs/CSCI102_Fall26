@@ -1,5 +1,9 @@
 """
+Chapter 1: Python Fundamentals
 
+In this chapter, you will learn how to create basic Python programs using variables, input, output, data types,
+math operations, comments, and strings. You will also practice formatting output, converting data types,
+naming variables correctly, and identifying common syntax and runtime errors.
 """
 
 # --- Slide 2 (First Program)
