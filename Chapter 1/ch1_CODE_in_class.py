@@ -7,63 +7,71 @@ naming variables correctly, and identifying common syntax and runtime errors.
 """
 
 # --- Slide 2 (First Program)
-
+# greet = "Hello world!"
+# print(greet)
 
 
 
 # --- Slide 4 (Variables)
-
+# greet = "Hello world!"
 # 1) Python creates memory containers in physical memory
 
-pass # Shows the memory location of the variable
+# print(id(greet)) # Shows the memory location of the variable
 
 
 #2) Variables need to be given an initial value
-pass # 'Bob' is the initial value
-pass # We get an error if we do not give a value to a variable
-
-
+# name = 'bob'
+# name # This needs an initial value
 
 #3) Variables with the same data are given the same memory location
-
+# name = 'bob' # 'Bob' is the initial value
+# same_name = 'bob' # We get an error if we do not give a value to a variable
+#
+# print(id(name))
+# print(id(same_name))
 
 
 #4) Variables can be overwritten
-
-
+# age = 18
+# print(age)
+#
+# age = 19
+# print(age)
 
 
 
 # --- Slide 6 (Data types)
-pass # integer (int) data type
-pass # decimal (float) value
+value = 2 # integer (int) data type
+temp = 93.5 # decimal (float) value
 
-pass # Character (char)
-pass # Text (String) data
+symbol = '!' # Character (char)
+message = "Hello" # Text (String) data
 
-pass # Boolean (Bool) data type
+success = False # Boolean (Bool) data type
+
 
 
 # We can check or verify a data type by using the 'type' command
-pass # Replace with a variable whose type you want to check (Notice a character is also treated like a string
+# print(type(success)) # Replace with a variable whose type you want to check (Notice a character is also treated like a string
 
 
 
 
 # --- Slide 7 (Dynamically typed)
 # 1) By declaring 'version' as 11, Python knows it is an int
-
-
-
+version = 11
+print(version)
 
 # 2) Two literals that appear similar can be of different types
-
-pass # Both show up as 11 but one is an int literal and another is a string literal
-
-
+diff_version = '11'
+# print(diff_version)
+# print(type(version), type(diff_version)) # Both show up as 11 but one is an int literal and another is a string literal
+#
+# print(version + version)
 
 # --- Slide 8 Input
-pass
+first_name = input("What is your first name? ")
+last_name = input("Enter your last name: ")
 
 pass # Comma separated values
 pass # String concatanation
