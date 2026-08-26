@@ -60,7 +60,7 @@ success = False # Boolean (Bool) data type
 # --- Slide 7 (Dynamically typed)
 # 1) By declaring 'version' as 11, Python knows it is an int
 version = 11
-print(version)
+# print(version)
 
 # 2) Two literals that appear similar can be of different types
 diff_version = '11'
@@ -70,12 +70,12 @@ diff_version = '11'
 # print(version + version)
 
 # --- Slide 8 Input
-first_name = input("What is your first name? ")
-last_name = input("Enter your last name: ")
-
-pass # Comma separated values
-pass # String concatanation
-pass # F-string
+# first_name = input("What is your first name? ")
+# last_name = input("Enter your last name: ")
+#
+# print("hello", first_name, last_name) # Comma separated values
+# print("hello" + first_name + last_name) # String concatanation
+# print(f"Hello {first_name} {last_name}") # F-string
 
 
 # --- Slide 9 ACTIVITY
@@ -88,27 +88,33 @@ Directly outputting the string with their name
 
 Asking for an input, storing it to a variable, then printing the value
 """
-
-
+# spell = input("Enter a spell to cast: ")
+# print(f"You cast {spell}")
 
 # --- Slide 10 Recasting data types
-pass # All inputs unless recast to a different type are STRINGS
-
+# age = input("Enter you age: ") # All inputs unless recast to a different type are STRINGS
+# print(type(age))
 
 # If we don't convert age to an int, it can cause unexpected results
-pass
+# print("Double age", age + age)
 
 
 #As long as Python allows it, we can convert one data type into another:
-pass
+# age_int = int(age)
+# print("Double age", age_int + age_int)
+#
+# age_float = float(age)
+# print("Double age", age_float + age_float)
 
-
-pass # Useful if we want to convert BACK into a string
+# print("Next year you will be" + (age + 1))
+# print("Next year you will be" + str((age_int + 1))) # Useful if we want to convert BACK into a string
 
 
 
 # --- Slide 11 Outputting Multiple Expressions
-pass
+first_name = 'James'
+last_name = 'Bond'
+age = 40
 
 # three ways to output multiple expressions:
 """
@@ -119,21 +125,21 @@ Comma seperated elements can be off any data type and are printed as seperate el
 """
 
 #1) Using string concatenation
-pass # Notice the lack of spaces
-pass # Now we have spaces
+# print("call me" + " " +last_name + " " +first_name + last_name) # Notice the lack of spaces
 
-pass # This gives an error because the age variable is an int, not a string
-pass # By recasting the variable to a string, we can use string concatenation
+
+# print("I am" + age + "years old") # This gives an error because the age variable is an int, not a string
+print("I am" + str(age) + "years old") # By recasting the variable to a string, we can use string concatenation
 
 
 
 #2) Comma Separated Values
-
-pass # Comma separated elements are not limited to strings data types.
+print("call me", last_name, first_name, last_name)
+print("I am", age) # Comma separated elements are not limited to strings data types.
 
 
 #3) F-Strings are often the preferred way to build strings as they can be easiest to work with
-
+print(f"Call me {last_name} {first_name}, I am {age}")
 
 # --- Slide 12 Performing Math Operations
 pass
