@@ -129,52 +129,59 @@ Comma seperated elements can be off any data type and are printed as seperate el
 
 
 # print("I am" + age + "years old") # This gives an error because the age variable is an int, not a string
-print("I am" + str(age) + "years old") # By recasting the variable to a string, we can use string concatenation
+# print("I am" + str(age) + "years old") # By recasting the variable to a string, we can use string concatenation
 
 
 
 #2) Comma Separated Values
-print("call me", last_name, first_name, last_name)
-print("I am", age) # Comma separated elements are not limited to strings data types.
+# print("call me", last_name, first_name, last_name)
+# print("I am", age) # Comma separated elements are not limited to strings data types.
 
 
 #3) F-Strings are often the preferred way to build strings as they can be easiest to work with
-print(f"Call me {last_name} {first_name}, I am {age}")
+# print(f"Call me {last_name} {first_name}, I am {age}")
 
 # --- Slide 12 Performing Math Operations
-pass
+a = 2
+b = 4
+c = 8
+d = 1.2
 
 
 
 # Addition and subtraction
-pass # Results in an int
-pass # Results in a float
+# print(a + b) # Results in an int
+# print(a + b + c + d) # Results in a float because d = 1.2
+# print(a * d)
 
 
 # Traditional Division - Always results in a float
-
+# print(c/a) # Answer is 4.0 NOT 4
 
 
 # Quotient Division (Always rounds DOWN - drops the decimal in the result)
-
+# print(10//9) # 1
+# print(99//100) # 0
 
 
 
 # Modulus (Mod) Operation displays the reminder when the first number is divided by the second.
-pass # Answer:
-pass # Answer:
-pass # Answer:
+# print(14 % 3) # Answer: 2
+# print(15 % 9) # Answer:6
+
 
 
 # Exponents
-
+# print(10**2)
+# print(4**2)
+# print(27**0.5)
 
 
 # Rounding Decimals
-
-pass # No rounding
-pass # Round to one decimal place
-pass # Round to two decimal places (and we can keep going)
+n = 25/13
+# print(n) # No rounding
+# print(round(n, 1)) # Round to one decimal place
+# print(round(n, 4)) # Round to two decimal places (and we can keep going)
 
 
 
@@ -188,21 +195,20 @@ It is useful for explaining your program at a high level.
 It can also be used to attribute the author and date the program was written
 """
 
-
 # --- Slide 16 Escape Characters
 """
 Escape Characters are characters that perform an action to a sting rather then conveying information.
 """
-pass # The new line character is the most common escape character
+print('Hello. \nHow \nAre \n You?') # The new line character is the most common escape character
 
 # Try Each of the following below to see how the escape characters work
 # print("1. hello " + 'there') #Substitute one of the escape chars for the '#'
-# print("2. hello\b " + ' there') # backspace
-# print("3. hello\n " + ' there') # Newlinw
-# print("4. hello\t " + ' there') # Tab
-# print("5. hello\\ " + ' there') # Single forward slash (\) character
-# print("6. hello\' " + ' there') # Single quotation (') character
-# print("7.hello\" " + ' there') # Double quotation (") character
+print("2. hello\b\b " + ' there') # backspace
+print("3. hello\n " + ' there') # Newlinw
+print("4. hello\t\t\t\t\t\t " + ' there') # Tab
+print("5. hello\\ " + ' there') # Single forward slash (\) character
+print("6. hello\' " + ' there') # Single quotation (') character
+print("7.hello\" " + ' there') # Double quotation (") character
 
 
 
