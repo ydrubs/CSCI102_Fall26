@@ -199,16 +199,16 @@ It can also be used to attribute the author and date the program was written
 """
 Escape Characters are characters that perform an action to a sting rather then conveying information.
 """
-print('Hello. \nHow \nAre \n You?') # The new line character is the most common escape character
+# print('Hello. \nHow \nAre \n You?') # The new line character is the most common escape character
 
 # Try Each of the following below to see how the escape characters work
 # print("1. hello " + 'there') #Substitute one of the escape chars for the '#'
-print("2. hello\b\b " + ' there') # backspace
-print("3. hello\n " + ' there') # Newlinw
-print("4. hello\t\t\t\t\t\t " + ' there') # Tab
-print("5. hello\\ " + ' there') # Single forward slash (\) character
-print("6. hello\' " + ' there') # Single quotation (') character
-print("7.hello\" " + ' there') # Double quotation (") character
+# print("2. hello\b\b " + ' there') # backspace
+# print("3. hello\n " + ' there') # Newlinw
+# print("4. hello\t\t\t\t\t\t " + ' there') # Tab
+# print("5. hello\\ " + ' there') # Single forward slash (\) character
+# print("6. hello\' " + ' there') # Single quotation (') character
+# print("7.hello\" " + ' there') # Double quotation (") character
 
 
 
@@ -222,22 +222,33 @@ color3 = 'blue'
 # print(color2)
 
 # We can change the newline to another character(s)
-pass # Use a space instead of a new line
-
+# print(color1, end=" ") # Use a space instead of a new line
+# print(color2, end=' :) ')
+# print(color3)
 
 
 # We can change the seperator using the sep parameter
-pass # Puts a space by default
-pass # Place two stars between data elements rather than a space
+# print(color1, color2, color3) # Puts a space by default
+# print(color1 + color2, color3, sep='**') # Place two stars between data elements rather than a space
 
 
 # --- slide 18 Variable Naming
 # Example of valid names for variables
-pass
+count = 0
+_count = 0
+COUNT = 0
+count100 = 0
+character_health_level = 0 # snake-case
+
+characterHealthLevel = 0 #Camel-case
+
 
 
 # Invalid variable names
-pass
+# 1hi_there = 'hello'
+# if = 'hello'
+# hi! = 'hello'
+
 
 
 # --- Slide 20 ACTIVITY variable naming
@@ -248,15 +259,20 @@ Create three INVALID variables in three different ways and set them equal to the
 
 
 # --- Slide 21 Variable Assignment
-pass # Declare and initialize a variable - it is automatically recognized as a string
-pass # This overwrites my_var into a string
-pass # Doubles the value of my_var and stored back into itself
-
+# my_var = 'hello' # Declare and initialize a variable - it is automatically recognized as a string
+# my_var = 3.14 # This overwrites my_var into a string
+# my_var = my_var * 2 # Doubles the value of my_var and stored back into itself
+# print(my_var)
 
 # Variables can be manipulated relative to other variables
 x = 25
 y = 5
 
+x = x + y # x = 30
+# print(x)
+
+y = x/y # y = 6.0
+# print(y)
 
 
 
@@ -269,16 +285,23 @@ s1 = 'waaz'
 s2 = 'a'
 s3 = 'p'
 
-pass
+print((s1 + s2*32 + s3 + ' ') * 3 + "y'all")
 
 
 # --- Slide 23 ACTIVITY
 """
 Write a print statement that outputs the string seen in slide 23 of the powerpoint
 """
+# joke = """
+# ^^^^^^^^^^
+# ##########
+# ##########
+# ##########
+# ^^^^^^^^^^
+# """
+# print(joke)
 
-
-
+print(("^"*10+"\n")+("#"*10+"\n")*3 + ("^"*10))
 
 # --- Slide 24 Errors (Run-Time vs. Syntax)
 ## Run Time Errors
