@@ -285,7 +285,7 @@ s1 = 'waaz'
 s2 = 'a'
 s3 = 'p'
 
-print((s1 + s2*32 + s3 + ' ') * 3 + "y'all")
+# print((s1 + s2*32 + s3 + ' ') * 3 + "y'all")
 
 
 # --- Slide 23 ACTIVITY
@@ -301,12 +301,12 @@ Write a print statement that outputs the string seen in slide 23 of the powerpoi
 # """
 # print(joke)
 
-print(("^"*10+"\n")+("#"*10+"\n")*3 + ("^"*10))
+# print(("^"*10+"\n")+("#"*10+"\n")*3 + ("^"*10))
 
 # --- Slide 24 Errors (Run-Time vs. Syntax)
 ## Run Time Errors
-# animal = "Dog"
-# print(animol)
+animal = "Dog"
+print(animol)
 
 # print(5/0)
 
