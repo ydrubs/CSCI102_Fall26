@@ -24,4 +24,11 @@ Use string Multiplication to create your own interesting pattern that is printed
     :Author: <NAME>
     :Date: <TODAY'S DATE>
 """
-#YOUR CODE HERE
+print(" " * 8 + "/\\")
+print(" " * 6 + "/" + "=" * 4 + "\\")
+print(" " * 4 + "/" + "o" * 2 + "-" * 2 + "o" * 2 + "\\")
+print(" " * 2 + "/" + "~" * 10 + "\\")
+print(" " + "|" + "#" * 4 + "@" * 4 + "#" * 4 + "|")
+print(" " + "|" + "+" * 3 + "HELLO" + "+" * 3 + "|")
+print(" " + "|" + "%" * 12 + "|")
+print(" " * 2 + "\\" + "_" * 10 + "/")
