@@ -39,19 +39,19 @@ Gives the ability to run an alternative condition if the first one does not trig
 """
 Checks multiple conditions to decide which block to run
 """
-grade = int(input("Enter your grade: "))
-
-if grade > 89:
-    print("Good job!")
-
-elif grade > 79:
-    print("Not bad")
-
-elif grade > 69:
-    print("Needs improvement")
-
-else:
-    print("Better luck next time")
+# grade = int(input("Enter your grade: "))
+#
+# if grade > 89:
+#     print("Good job!")
+#
+# elif grade > 79:
+#     print("Not bad")
+#
+# elif grade > 69:
+#     print("Needs improvement")
+#
+# else:
+#     print("Better luck next time")
 
 # --- WHAT HAPPENS IF WE CHANGE THE FIRST ELIF TO AN IF?
 
@@ -81,33 +81,56 @@ else:
 """
 Ability to compare TWO OR MORE things that can be quantified (given a numeric value)
 """
+x = 10
+y = 5
+z = 2
+
+# print(x == y) #ANSWER: FALSE
+# print(x > y) #ANSWER: TRUE
+# print(y > x/z) # ANSWER: FALSE
+
+l1 = 'a'
+l2 = 'A'
+
+# print(l1 > l2)
+#
+# print(l1.__gt__(l2))
+# print(x.__ne__(z)) # Same as x!=y
+
+# for i in range(2000,3000):
+#     print(chr(i), end = ' ')
 
 
 
 
 ##Slide 10: Logical Operators
-# a = True
-# b = False
+a = True
+b = False
+
+
+# print(a or(a and b)) # ANSWER: TRUE
+# print(b and (a or b)) # ANSWER: FALSE
 #
+# print(not b or (a and b)) # ANSWER: TRUE
 #
-# print(a or(a and b)) # ANSWER:
-# print(b and (a or b)) # ANSWER:
-# print(not b or (a and b)) # ANSWER:
-# print(a and not b or b and not a) # ANSWER:
+# print(a and not b or b and not a) # ANSWER:TRUE
 
 
 # --- Write your own challenging logic statement, make it as long as you want
-
+# print(b and (a or((a or b) and b))) # Answer: False
 
 
 ##slide 11 - Evaluating Logic statements
 # grade = int(input("What is your grade: "))
-# if pass:
+# if grade >= 90 and grade < 101:
 #     print('Nice Job')
-# elif pass:
+#
+# elif grade < 90 and grade >= 80:
 #     print('Not bad')
-# elif pass:
+#
+# elif grade > 80:
 #     print('There is room for improvement')
+#
 # else:
 #     print("Better luck next time")
 
@@ -129,8 +152,19 @@ Write a multi-way conditional that does the following:
 	3) If the username does not match, print (‘no user found)
 
 """
+valid_username = 'user123'
+is_active = False
 
+user = input("Enter a username: ")
 
+if user == valid_username and is_active:
+    print('Access granted!')
+
+elif user == valid_username and not is_active:
+    print("Access Denied!")
+
+elif user != valid_username:
+    print("You don't belong here!")
 
 ##Slide 15 - using a for loop
 """
