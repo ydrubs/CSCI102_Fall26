@@ -155,39 +155,57 @@ Write a multi-way conditional that does the following:
 valid_username = 'user123'
 is_active = False
 
-user = input("Enter a username: ")
-
-if user == valid_username and is_active:
-    print('Access granted!')
-
-elif user == valid_username and not is_active:
-    print("Access Denied!")
-
-elif user != valid_username:
-    print("You don't belong here!")
+# user = input("Enter a username: ")
+#
+# if user == valid_username and is_active:
+#     print('Access granted!')
+#
+# elif user == valid_username and not is_active:
+#     print("Access Denied!")
+#
+# elif user != valid_username:
+#     print("You don't belong here!")
 
 ##Slide 15 - using a for loop
 """
 A for loop is used to run a block of code a defined number of times (called a definite loop)
 """
-pass
+num_of_times = 5
 
+# for number in range(num_of_times):
+#     print(number, 'hello')
+#
 
 ## using a conditional in a for loop
-pass
+greeting = 'Jellybean'
 
-
+# for n in greeting:
+#     # print(n)
+#     if n!= 'e':
+#         print(n)
+#
 
 
 ##Slide 17 - Looping through an algorithm
+number = 1
 
 
-
+# for i in range(10):
+#     print(i)
+#     number = number + 3
+#     print(number)
+#
+# print(number)
 
 
 ##Slide 18 - Another example
-
-
+# total = 1
+# product = 2
+#
+# for i in range(5):
+#     total = total * product
+#     print(total)
+#
 
 
 
@@ -196,15 +214,16 @@ pass
 The loop counter is a variable that lets Python keep track of how many times the loop has run.
 
 Anytime there is a need to use that information in our code block, the loop counter variable can be called.
-"""
-pass
-
+# """
+# for i in range(11):
+#     print(i)
 
 
 ## --- Equivalent to the following but twice as long
 # count = 0
+#
 # for i in range(11):
-#     print(count, end='**')
+#     print(count)
 #     count = count + 1
 
 
@@ -217,7 +236,9 @@ Write a for loop that counts 20 ‘Mississippis’, such as -
 ...
 20 Mississippi
 """""
-pass
+# for i in range(20):
+#     i = i + 1
+#     print(i, 'Mississippi')
 
 
 
@@ -225,7 +246,9 @@ pass
 """
 The SECOND ARGUMENT in the loop range tells what number the loop counter should START counting on
 """
-pass
+# for i in range(5,20):
+#     print(i)
+
 
 
 
@@ -234,10 +257,12 @@ pass
 The THIRD ARGUMENT inside of the range command tells the loop counter how much to count by
 """
 # Count by threes
-pass
+# for i in range(1,100,3):
+#     print(i)
 
 # Count backwards from 100
-pass
+for i in range(100,0,-1):
+    print(i)
 
 
 
