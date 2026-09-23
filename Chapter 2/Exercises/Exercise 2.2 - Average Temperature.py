@@ -9,7 +9,7 @@ Write a program that calculates the average temperature over a number of days.
     4. After the loop finishes, calculate the average temperature.
     5. Display the average rounded to one decimal place.
 
-Example input:
+Example inputs:
 
     How many days? 4
 
