@@ -1,5 +1,5 @@
 """
-Optional Challenge - Digit Counter
+Optional Challenge - Digit Counter:
 
 Ask the user to enter a positive integer.
 

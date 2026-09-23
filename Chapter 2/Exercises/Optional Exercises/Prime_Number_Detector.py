@@ -1,5 +1,5 @@
 """
-Prime Number Detector
+Prime Number Detector:
 
 Ask the user to enter an integer greater than 1.
 

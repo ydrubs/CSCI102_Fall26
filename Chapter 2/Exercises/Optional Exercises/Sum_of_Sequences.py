@@ -1,5 +1,5 @@
 """
-The program asks the user for input and calculates the sum of sequence based on the following -
+The program asks the user for input and calculates the sum of sequence based on the following:
 
     1. Ask the user for the first number in a sequence as a single integer digit.
     2. Ask the user for the number of terms in a sequence.
