@@ -261,10 +261,10 @@ The THIRD ARGUMENT inside of the range command tells the loop counter how much t
 #     print(i)
 
 # Count backwards from 100
-for i in range(100,0,-1):
-    print(i)
-
-
+# for i in range(100,0,-1):
+#     print(i)
+#
+#
 
 ##Slide 23 - Augmented Assignment
 """
@@ -276,21 +276,50 @@ However, it is much more conventional to use augmented assignment to do the same
 """
 a = 5
 b = 5
-# print(a, b)
+print(a, b)
 
-pass
+a +=5 # Same as a = a + 5
+b -=2
+print(a,b)
 
 
-pass
+c = 2
+d = 3
 
-pass
+c **=2 ## Same c = c ** 2
+d **=2
+print(c, d)
+
+######################## PRACTICE #########################
+total = 1
+
+for i in range(3):
+    n = int(input("Enter an integer: "))
+    op = input("Enter 'A' for Addition and 'M' for Multiplication: ")
+
+    if op == 'A':
+        total += n # total = total + n
+
+    elif op == 'M':
+        total *= n
+
+    else:
+        print("Invalid input, you used up one of your passes")
+
+    print("Current total: ", total)
+
+print("LOOP DONE!")
+
+
+###### FIZZ BUZZ PROBLEM ############
+
 
 
 
 ##Slide 26 - The while Loop
 """
 A while loop (called an entry-controlled loop) runs until a condition is met
-Before the loop starts it checks whether the conidtion to start the loop is true. 
+Before the loop starts it checks whether the condition to start the loop is true. 
     ...If it is the code in the loop body runs
 """
 
