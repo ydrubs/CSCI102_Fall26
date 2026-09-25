@@ -274,46 +274,57 @@ To add to a variable we can do the following for example:
 However, it is much more conventional to use augmented assignment to do the same thing:
         x +=2
 """
-a = 5
-b = 5
-print(a, b)
-
-a +=5 # Same as a = a + 5
-b -=2
-print(a,b)
-
-
-c = 2
-d = 3
-
-c **=2 ## Same c = c ** 2
-d **=2
-print(c, d)
+# a = 5
+# b = 5
+# print(a, b)
+#
+# a +=5 # Same as a = a + 5
+# b -=2
+# print(a,b)
+#
+#
+# c = 2
+# d = 3
+#
+# c **=2 ## Same c = c ** 2
+# d **=2
+# print(c, d)
 
 ######################## PRACTICE #########################
-total = 1
-
-for i in range(3):
-    n = int(input("Enter an integer: "))
-    op = input("Enter 'A' for Addition and 'M' for Multiplication: ")
-
-    if op == 'A':
-        total += n # total = total + n
-
-    elif op == 'M':
-        total *= n
-
-    else:
-        print("Invalid input, you used up one of your passes")
-
-    print("Current total: ", total)
-
-print("LOOP DONE!")
+# total = 1
+#
+# for i in range(3):
+#     n = int(input("Enter an integer: "))
+#     op = input("Enter 'A' for Addition and 'M' for Multiplication: ")
+#
+#     if op == 'A':
+#         total += n # total = total + n
+#
+#     elif op == 'M':
+#         total *= n
+#
+#     else:
+#         print("Invalid input, you used up one of your passes")
+#
+#     print("Current total: ", total)
+#
+# print("LOOP DONE!")
 
 
 ###### FIZZ BUZZ PROBLEM ############
-
-
+# for i in range(1,101):
+#     # print(i)
+#     if i % 3 ==0 and i % 5 == 0:
+#         print('Fizz Buzz')
+#
+#     elif i % 5 == 0:
+#         print("Buzz")
+#
+#     elif i % 3 ==0:
+#         print("Fizz")
+#
+#     else:
+#         print(i)
 
 
 ##Slide 26 - The while Loop
@@ -324,67 +335,86 @@ Before the loop starts it checks whether the condition to start the loop is true
 """
 
 """ Ask for a number and add until you hit 1000 """
-pass
+# stop = 1000
+# total = 0
+#
+# while total < stop:
+#     n = int(input("Please enter a number: "))
+#     total +=n # total = total + n
+#     print(total)
 
-
-
-#slide 28 ACTIVITY
-pass
 
 
 
 ##Slide 29 - While Loop for entering data
-theSum = 0.0
+# theSum = 0.0
 # data = input('Enter a number or just enter to quit: ')
-pass
+#
+# while data != '':
+#     data = float(data)
+#     theSum += data
+#
+#     data = input('Enter a number or just enter to quit: ')
+#     print(theSum)
 
 
-
-##Slide 30 - Breaking a loop
-theSum = 0.0
-
-while True:
-    # data = input("Enter a number or just enter to quit: ")
-    pass
-
-
-##Slide 32 - While loop to validate data
-pass
+# ##Slide 30 - Breaking a loop
+# theSum = 0.0
+#
+# while True:
+#     data = input("Enter a number or just enter to quit: ")
+#
+#     if data == 'stop':
+#         break
+#
+#     print("I am still in the loop")
 
 
 ##Slide 33 - The While and the Boolean flag
-
-
+# done = False
+#
+# while not done:
+#     grade = int(input("Enter a grade between 1 and 100: "))
+#
+#     if grade >=1 and grade <=100:
+#         print("Valid data")
+#         done = True
+#
+#     else:
+#         print("Data is not valid")
 
 
 
 #Slide 34 - Common While loop errors
 
 ################  Fail to break loop
-while True:
-    number = int(input('Enter the numeric grade: '))
-    if number >= 0 and number <= 100:
-        print(number)
-        # NEED TO ADD 'break'
-
-    else:
-        print('Error: grade must be between 100 and 0')
-        print(number) # Just echo the valid input
+# while True:
+#     number = int(input('Enter the numeric grade: '))
+#     if number >= 0 and number <= 100:
+#         print(number)
+#         # NEED TO ADD 'break'
+#         break
+#
+#     else:
+#         print('Error: grade must be between 100 and 0')
+#         print(number) # Just echo the valid input
 
 ################    infinite Loop, not updating variable
-a = 0
-count = 0
-while a < 1000:
-    count += 1
-    print(a, count)
+# a = 0
+# count = 0
+#
+# while a < 1000:
+#     count += 1
+#     print(a, count)
+#     a +=1
 
 ###############    Did not test for a = 500 condition
-a = 0
-
-while a < 1000:
-    a +=1
-    if a < 500:
-        print("Boom", a)
-    if a > 500:
-        print('Pow', a)
-    ##Doesn't test a = 500
+# a = 0
+#
+# while a < 1000:
+#     a +=1
+#     if a < 500:
+#         print("Boom", a)
+#     if a > 500:
+#         print('Pow', a)
+#     #Doesn't test a = 500
