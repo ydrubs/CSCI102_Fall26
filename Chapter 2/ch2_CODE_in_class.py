@@ -346,10 +346,10 @@ Before the loop starts it checks whether the condition to start the loop is true
 
 
 
-##Slide 29 - While Loop for entering data
-# theSum = 0.0
-# data = input('Enter a number or just enter to quit: ')
-#
+#Slide 29 - While Loop for entering data
+theSum = 0.0
+data = input('Enter a number or just enter to quit: ')
+
 # while data != '':
 #     data = float(data)
 #     theSum += data
@@ -418,3 +418,28 @@ Before the loop starts it checks whether the condition to start the loop is true
 #     if a > 500:
 #         print('Pow', a)
 #     #Doesn't test a = 500
+
+
+##### Loop Practice IN-CLASS - DNA SEQUENCE ###########
+sequence = ''
+
+while True:
+    s = input("Enter a letter: A, T, C, or G or stop to quit.")
+
+    if s == 'A' or s == 'T' or s == 'C' or s == 'G':
+        sequence +=s
+
+    elif s == 'stop':
+        break
+
+    else:
+        print("Invalid Input")
+
+print(f"The sequence is {sequence}")
+
+count_c = 0
+for letter in sequence:
+    if letter == 'C':
+        count_c +=1
+
+print(f"You have {count_c} C's.")
