@@ -442,4 +442,4 @@ for letter in sequence:
     if letter == 'C':
         count_c +=1
 
-print(f"You have {count_c} C's")
+print(f"You have {count_c} C's.")
