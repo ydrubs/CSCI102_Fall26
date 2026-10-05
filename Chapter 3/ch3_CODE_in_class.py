@@ -46,7 +46,9 @@ Let's look at all three by generating a random number between 1 and 10 using ran
 
 # 1) Import everything organized in a 'toolbox'
 
-pass
+# import random
+# n = random.randint(1,10)
+# print(n)
 
 """
 In order to use randint (or any function from the random library we have to first reference the library the function is from.
@@ -55,7 +57,10 @@ This is similar to knowing which 'toolbox' you are grabbing a specific tool (or 
 
 # 2) Import everything dumping out all the tools
 
-pass
+# from random import *
+# n = randint(1,10)
+# print(n)
+
 
 """
 Here we do NOT have to reference the toolbox because all our tools are now 'dumped out'.
@@ -69,7 +74,11 @@ This is usually not the best practice because:
 
 # 3) Import a specific tool from the toolbox
 
-pass
+# from random import randint, random
+#
+# print(random())
+#
+# n = randint(1,10)
 
 """
 Here we only import one function from the 26 or so available in the random module. 
@@ -79,16 +88,33 @@ separates the name of the variable and the name of the function into two complet
 """
 
 # --- Slide 7 (Dice Rolling Simulator)
-pass
-
-
+# from random import randint
+#
+# rolls = 10
+# sides = 6
+#
+# for i in range(rolls):
+#     result = randint(1,sides)
+#     print(result)
 
 
 # --- Slide 8 (Guess the number Game)
-pass
+from random import randint
 
+computer_num = randint(1,100)
+player_guess = 0
 
+while computer_num != player_guess:
+    player_guess = int(input("Please enter a number between 1 and 100: "))
 
+    if player_guess == computer_num:
+        print("You are correct!")
+
+    elif player_guess > computer_num:
+        print("Try again, you guesses HIGH.")
+
+    elif player_guess < computer_num:
+        print("Try again, you guesses LOW.")
 
 ############################################################
 # In-class coin flip simulator (mote carlo simulation)
@@ -285,8 +311,8 @@ pass
 
 
 # --- Slide 31 Application - Adding to a list by looping
-roster_size = int(input("Enter the number of people to add: ")) #Get input about number
-roster_lst = [] #Create an empty list to hold the people
+# roster_size = int(input("Enter the number of people to add: ")) #Get input about number
+# roster_lst = [] #Create an empty list to hold the people
 
 pass #Loop through however many people we said we wanted to add
 pass #Get the persons name
@@ -304,12 +330,12 @@ pass
 
 
 # --- Slide 33 Whole list operations
-from random import randint
-lst = []
-for i in range(10):
-    lst.append(randint(1, 100))
-
-print(lst)
+# from random import randint
+# lst = []
+# for i in range(10):
+#     lst.append(randint(1, 100))
+#
+# print(lst)
 
 pass
 
