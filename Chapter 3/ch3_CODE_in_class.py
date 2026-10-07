@@ -99,27 +99,53 @@ separates the name of the variable and the name of the function into two complet
 
 
 # --- Slide 8 (Guess the number Game)
-from random import randint
-
-computer_num = randint(1,100)
-player_guess = 0
-
-while computer_num != player_guess:
-    player_guess = int(input("Please enter a number between 1 and 100: "))
-
-    if player_guess == computer_num:
-        print("You are correct!")
-
-    elif player_guess > computer_num:
-        print("Try again, you guesses HIGH.")
-
-    elif player_guess < computer_num:
-        print("Try again, you guesses LOW.")
+# from random import randint
+#
+# computer_num = randint(1,100)
+# player_guess = 0
+#
+# while computer_num != player_guess:
+#     player_guess = int(input("Please enter a number between 1 and 100: "))
+#
+#     if player_guess == computer_num:
+#         print("You are correct!")
+#
+#     elif player_guess > computer_num:
+#         print("Try again, you guesses HIGH.")
+#
+#     elif player_guess < computer_num:
+#         print("Try again, you guesses LOW.")
 
 ############################################################
 # In-class coin flip simulator (mote carlo simulation)
 
-# Exercise needed
+from random import randint
+
+simulation = 10000
+sum_of_flips = 0
+
+
+
+for i in range(simulation):
+
+    head_count = 0
+    flip_count = 0
+
+    while head_count < 3:
+        flip_count +=1
+        flip_result = randint(0,1)
+        # print(flip_result)
+
+        if flip_result == 0:
+            head_count +=1
+
+        else:
+            head_count = 0
+
+    sum_of_flips += flip_count
+    print(f"It took you {flip_count} to get 3 heads in a row")
+
+print(f"It took an average of {sum_of_flips/simulation} to get three heads in a row over {simulation} simulations.")
 ############################################################
 
 
