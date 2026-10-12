@@ -121,38 +121,39 @@ separates the name of the variable and the name of the function into two complet
 
 from random import randint
 
-simulation = 10000
-sum_of_flips = 0
+# simulation = 10000
+# sum_of_flips = 0
+#
+#
+#
+# for i in range(simulation):
+#
+#     head_count = 0
+#     flip_count = 0
+#
+#     while head_count < 3:
+#         flip_count +=1
+#         flip_result = randint(0,1)
+#         # print(flip_result)
+#
+#         if flip_result == 0:
+#             head_count +=1
+#
+#         else:
+#             head_count = 0
+#
+#     sum_of_flips += flip_count
+#     print(f"It took you {flip_count} to get 3 heads in a row")
 
-
-
-for i in range(simulation):
-
-    head_count = 0
-    flip_count = 0
-
-    while head_count < 3:
-        flip_count +=1
-        flip_result = randint(0,1)
-        # print(flip_result)
-
-        if flip_result == 0:
-            head_count +=1
-
-        else:
-            head_count = 0
-
-    sum_of_flips += flip_count
-    print(f"It took you {flip_count} to get 3 heads in a row")
-
-print(f"It took an average of {sum_of_flips/simulation} to get three heads in a row over {simulation} simulations.")
+# print(f"It took an average of {sum_of_flips/simulation} to get three heads in a row over {simulation} simulations.")
 ############################################################
 
 
 # --- Slide 9 Characters
-pass
-
-
+# print('A' < 'a')
+#
+# print(ord('a'))
+# print(chr(97))
 
 
 # --- Slide 10 Characters
@@ -172,27 +173,39 @@ Creating a simple Ceaser Cipher
 message = "hello"
 longer_message = "How are you doing today?"
 
-pass
+# print(len(message))
+# print(len(longer_message))
 
 
 
 
 # --- Slide 12 Strings - Indexing
-pass
+# print(message[1]) # This prints letter 'e'
+# print(message[0]) # This prints letter 'h'
 
+# print(message[5]) # This give an IndexError
 
 # --- Slide 13 Strings - Indexing
-pass
+# print(message[-1]) # This prints the LAST character 'o'
+# print(message[-2])
 
 
 
 #Slide 14 Strings - Looping
-pass
+"""
+Two ways to loop - 
+ 1) Using an index 
+ 2) Using the characters in the string
+"""
 
-
-
-pass
-
+# for i in range(len(message)):
+#         print(i, message[i])
+#
+# for c in message:
+#     print(c)
+#
+# for i,c in enumerate(message):
+#     print(message[i], c)
 
 #--- Slide 15 Your Turn
 pass
@@ -203,26 +216,28 @@ pass
 # --- Slide 17 Slicing for substrings
 some_string = 'The quick brown fox jumped over the lazy dog'
 
-pass # The whole message
-pass # Start at character 4 and go till end
+print(some_string[0:]) # The whole message
+print(some_string[4:]) # Start at character 4 and go till end
 
 
-pass # Start at character 4 and go till 8
-pass # Char 4 till end
+print(some_string[4:9]) # Start at character 4 and go till 8
+print(some_string[4:len(some_string)]) # Char 4 till end
 
 
-pass # Third to last char until end
-pass # 8'th to last char until 5 to last
+print(some_string[-3:]) # Third to last char until end
+print(some_string[-8:-4]) # 8'th to last char until 5 to last
 
-pass # Entire string but only every other character displayed
-pass # Entire Sting Backwards
+print(some_string[::2]) # Entire string but only every other character displayed
+print(some_string[::-1]) # Entire Sting Backwards
 
-pass # Combine slices (Prints 'The dog')
+print(some_string[0:3] + some_string[-4:]) # Combine slices (Prints 'The dog')
 
 
 # --- Slide 18 Your turn - Move Two Letters
-pass
+word = input("Please enter a word:")
 
+new_word = word[-2:] + word[:-2]
+print(new_word)
 
 
 
