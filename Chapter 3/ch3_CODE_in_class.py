@@ -214,59 +214,102 @@ pass
 
 
 # --- Slide 17 Slicing for substrings
-some_string = 'The quick brown fox jumped over the lazy dog'
-
-print(some_string[0:]) # The whole message
-print(some_string[4:]) # Start at character 4 and go till end
-
-
-print(some_string[4:9]) # Start at character 4 and go till 8
-print(some_string[4:len(some_string)]) # Char 4 till end
-
-
-print(some_string[-3:]) # Third to last char until end
-print(some_string[-8:-4]) # 8'th to last char until 5 to last
-
-print(some_string[::2]) # Entire string but only every other character displayed
-print(some_string[::-1]) # Entire Sting Backwards
-
-print(some_string[0:3] + some_string[-4:]) # Combine slices (Prints 'The dog')
-
+# some_string = 'The quick brown fox jumped over the lazy dog'
+#
+# print(some_string[0:]) # The whole message
+# print(some_string[4:]) # Start at character 4 and go till end
+#
+#
+# print(some_string[4:9]) # Start at character 4 and go till 8
+# print(some_string[4:len(some_string)]) # Char 4 till end
+#
+#
+# print(some_string[-3:]) # Third to last char until end
+# print(some_string[-8:-4]) # 8'th to last char until 5 to last
+#
+# print(some_string[::2]) # Entire string but only every other character displayed
+# print(some_string[::-1]) # Entire Sting Backwards
+#
+# print(some_string[0:3] + some_string[-4:]) # Combine slices (Prints 'The dog')
+#
 
 # --- Slide 18 Your turn - Move Two Letters
-word = input("Please enter a word:")
-
-new_word = word[-2:] + word[:-2]
-print(new_word)
+# word = input("Please enter a word:")
+#
+# new_word = word[-2:] + word[:-2]
+# print(new_word)
 
 
 
 # --- Slide 20 String Methods
-superhero = 'the incredible hulk'
+# superhero = 'the incredible hulk'
+#
+# print((superhero.upper()))
+# print(superhero.title())
+# print(superhero.lower())
+# print(superhero.count('h'))
 
-pass
-
+# print(superhero[0:4].upper() + superhero[5:])
+# print(superhero.upper)
 
 
 # --- Slide 21 String Methods
 address = '123 Fake St.'
 
-pass
+# print(address.isdigit()) # Is the whole string a string of digits?
+# print(address.isupper())
 
 # Check which characters are digits
-pass
+# for char in address:
+#     print(char, char.isdigit())
 
 # Check which characters are uppercase
-for char in address:
-    pass
+# for char in address:
+#     print(char, char.isupper())
 
 # Check which characters are lowercase
-for char in address:
-    pass
+# for char in address:
+#     print(char,char.isalnum())
 
 
 ########## In class exercise (string methods) ############################
-pass
+"""
+
+Ask the user for an input string.
+
+The program should:
+    1) Count and display how many lower-case letters the string has
+    2) print a new string that only contains the uppercase letters from the string the user entered.
+
+
+For example:
+    If the user enters: 'The Quick Brown Fox Jumped Over the Lazy Dog'
+        1) The lower-case letter count would be 12
+        2) The string printed should be: 'TQBFJOLD'
+
+                Since those are the capital letters in the first string
+"""
+message = input("Please enter a string: ")
+lower_case = 0
+only_uppercase = ""
+word_count = 0
+
+for char in message:
+    # print(char)
+    if char.isupper():
+        # print(char)
+        only_uppercase +=char
+    if char.islower():
+        lower_case +=1
+    if char == ' ':
+        word_count+=1
+
+print(only_uppercase)
+print(f"You have {lower_case} lower case letters.")
+print(f'You have {word_count+1} words')
+
+
+
 ####################################################################################
 
 
