@@ -289,24 +289,24 @@ For example:
 
                 Since those are the capital letters in the first string
 """
-message = input("Please enter a string: ")
-lower_case = 0
-only_uppercase = ""
-word_count = 0
-
-for char in message:
-    # print(char)
-    if char.isupper():
-        # print(char)
-        only_uppercase +=char
-    if char.islower():
-        lower_case +=1
-    if char == ' ':
-        word_count+=1
-
-print(only_uppercase)
-print(f"You have {lower_case} lower case letters.")
-print(f'You have {word_count+1} words')
+# message = input("Please enter a string: ")
+# lower_case = 0
+# only_uppercase = ""
+# word_count = 0
+#
+# for char in message:
+#     # print(char)
+#     if char.isupper():
+#         # print(char)
+#         only_uppercase +=char
+#     if char.islower():
+#         lower_case +=1
+#     if char == ' ':
+#         word_count+=1
+#
+# print(only_uppercase)
+# print(f"You have {lower_case} lower case letters.")
+# print(f'You have {word_count+1} words')
 
 
 
@@ -314,9 +314,12 @@ print(f'You have {word_count+1} words')
 
 
 # --- Slide 22 String Methods - split
-story = "A long time ago in a galaxy far far away."
-
-pass
+# story = "A long time ago in a galaxy far far away."
+#
+# words = story.split()
+# print(words)
+#
+# print(words[1].upper()) # long
 
 
 # --- Slide 23 Testing for a Substring
@@ -328,28 +331,51 @@ their first victory against
 the evil Galactic Empire."""
 
 
-pass
+# print('time' in text) # True
+# print('galactic' in text) # False
 
+# print('galactic' in text.casefold()) #TRUE
+#
+# print(text.index('time')) # Tells you the position of the first letter in the word
+#
+# print(text.index('Time')) # ERROR because string (Time) does not exist
 
 
 # --- Slide 24 - Boolean Flags
-"""Check if a string has the letter A and a number in it"""
-pass
-
+"""Check if a string has the letter A"""
+# while True:
+#     my_string = input("Please enter a string: ")
+#
+#     #set flags
+#     has_A = False
+#
+#     for c in my_string:
+#         if c == 'A':
+#             has_A = True
+#
+#     if has_A:
+#         print("You have an A in your string")
+#         break
+#     else:
+#         print('No A in your string, try again.')
 
 
 
 # --- Slide 26 Mutable vs. Immutable Data
-mutable = ['G', 'O', 'O', 'D']
-pass
+# mutable = ['G', 'O', 'O', 'D']
+# print(mutable[0])
+#
+# mutable[0] = 'H'
+# mutable[2] = 'hello'
+# print(mutable)
 
-# immutable = 'Good'
-# print(immutable)
-pass #This command is fine
+immutable = 'Good'
+print(immutable)
+print(immutable[0]) #This command is fine
 
-pass # ..This is not. Can't override the individuals characters
-pass #...But you can override the variable itself
-
+# immutable[0] = 'H' # ..This is not. Can't override the individuals characters
+immutable = 'Hood' #...But you can override the variable itself
+print(immutable)
 
 
 
