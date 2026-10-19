@@ -364,37 +364,47 @@ the evil Galactic Empire."""
 # --- Slide 26 Mutable vs. Immutable Data
 # mutable = ['G', 'O', 'O', 'D']
 # print(mutable[0])
-#
+
 # mutable[0] = 'H'
 # mutable[2] = 'hello'
 # print(mutable)
 
-immutable = 'Good'
-print(immutable)
-print(immutable[0]) #This command is fine
+# immutable = 'Good'
+# print(immutable)
+# print(immutable[0]) #This command is fine
 
 # immutable[0] = 'H' # ..This is not. Can't override the individuals characters
-immutable = 'Hood' #...But you can override the variable itself
-print(immutable)
+# immutable = 'Hood' #...But you can override the variable itself
+# print(immutable)
 
 
 
 
 # --- Slide 28 Declaring Lists
-pass # Three element list
-pass # Lists can mix data types
-pass # Lists can contain other lists
-pass # Lists can be empty
-
-pass # lists have a length
-pass # Lists can be indexed
-pass
+my_list = []
+print(type(my_list))
+print(len(my_list))
 
 
-pass  # Elements of sublists can be accessed from within a list
+
+fruits = ['apple', 'orange', 'kiwi'] # Three element list
+profile = ['Jon', 30, True, [1.5, 3]] # Lists can mix data types
+
+coordinates = [[-1,3], [3,0], [2.5, -1.6]] # Lists can contain other lists
+print(coordinates[0])
+print(coordinates[-1])
+print(coordinates[1][0]) # prints 3
+
+
 
 # --- Lists can store the result of other operation
-pass
+# x = 19
+#
+# def hello():
+#     return 'hi'
+#
+# lst = [x, x**0.5, x+1, hello()]
+# print(lst)
 
 
 # --- Slide 29 Your turn
@@ -407,29 +417,34 @@ pokemon = ["Pikachu", "Eevee", "Charmander", "Squirtle"]
 
 ## 1) Using the ‘append’ method (most common)
     ## Adds the element to the end of a list
-pass
+# pokemon.append('Rowlet')
+# print(pokemon)
 
 
 ## 2) Using the .insert method
     ## Adds the element at the index specified
-pass
+# pokemon.insert(1, 'Snoralax')
+# print(pokemon)
 
 
 ## 3) Using the .extend method
     ## Adds the elements of the first list to the second to create a combined list
-pass
+# new_pokemon = ['Articuno', 'Zapdos', 'Moltres']
+#
+# pokemon.extend(new_pokemon)
+# print(pokemon)
 
 
 
 # --- Slide 31 Application - Adding to a list by looping
-# roster_size = int(input("Enter the number of people to add: ")) #Get input about number
-# roster_lst = [] #Create an empty list to hold the people
+roster_size = int(input("Enter the number of people to add: ")) #Get input about number
+roster_lst = [] #Create an empty list to hold the people
 
-pass #Loop through however many people we said we wanted to add
-pass #Get the persons name
-pass #Add the person to the end of the roster list
+for i in range(roster_size): #Loop through however many people we said we wanted to add
+    new_member = input("What is the person's name: ") #Get the persons name
+    roster_lst.append(new_member) #Add the person to the end of the roster list
 
-pass #print results
+print(roster_lst) # print results
 
 
 # --- Slide 32 Application – Filtering a list
