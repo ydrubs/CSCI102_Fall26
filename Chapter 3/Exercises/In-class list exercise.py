@@ -30,3 +30,18 @@ countries = ['United States', 'Russia', 'Canada', 'China', 'Mexico', 'Brazil', '
              'Solomon Islands', 'Saint Kitts and Nevis', 'Saint Lucia', 'Guinea-Bissau', 'Vanuatu', 'Marshall Islands',
              'Tuvalu', 'Grenada', 'Kiribati', 'Saint Vincent and the Grenadines', 'Palau', 'Comoros', 'Nauru', 'São Tomé and Príncipe']
 
+
+# print(len(countries))
+# print(len(countries[0]))
+
+longest_country = 0
+country_name = ''
+
+for country in countries:
+    # print(len(country))
+    if len(country) > longest_country:
+        longest_country = len(country)
+        country_name = country
+        # print(longest_country)
+
+print(longest_country, country_name)

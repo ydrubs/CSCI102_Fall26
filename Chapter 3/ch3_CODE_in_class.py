@@ -387,14 +387,14 @@ print(len(my_list))
 
 
 
-fruits = ['apple', 'orange', 'kiwi'] # Three element list
-profile = ['Jon', 30, True, [1.5, 3]] # Lists can mix data types
-
-coordinates = [[-1,3], [3,0], [2.5, -1.6]] # Lists can contain other lists
-print(coordinates[0])
-print(coordinates[-1])
-print(coordinates[1][0]) # prints 3
-
+# fruits = ['apple', 'orange', 'kiwi'] # Three element list
+# profile = ['Jon', 30, True, [1.5, 3]] # Lists can mix data types
+#
+# coordinates = [[-1,3], [3,0], [2.5, -1.6]] # Lists can contain other lists
+# print(coordinates[0])
+# print(coordinates[-1])
+# print(coordinates[1][0]) # prints 3
+#
 
 
 # --- Lists can store the result of other operation
@@ -413,7 +413,7 @@ pass
 
 
 # --- Slide 30 Adding Elements to a list
-pokemon = ["Pikachu", "Eevee", "Charmander", "Squirtle"]
+# pokemon = ["Pikachu", "Eevee", "Charmander", "Squirtle"]
 
 ## 1) Using the ‘append’ method (most common)
     ## Adds the element to the end of a list
@@ -437,22 +437,37 @@ pokemon = ["Pikachu", "Eevee", "Charmander", "Squirtle"]
 
 
 # --- Slide 31 Application - Adding to a list by looping
-roster_size = int(input("Enter the number of people to add: ")) #Get input about number
-roster_lst = [] #Create an empty list to hold the people
-
-for i in range(roster_size): #Loop through however many people we said we wanted to add
-    new_member = input("What is the person's name: ") #Get the persons name
-    roster_lst.append(new_member) #Add the person to the end of the roster list
-
-print(roster_lst) # print results
+# roster_size = int(input("Enter the number of people to add: ")) #Get input about number
+# roster_lst = [] #Create an empty list to hold the people
+#
+# for i in range(roster_size): #Loop through however many people we said we wanted to add
+#     new_member = input("What is the person's name: ") #Get the persons name
+#     roster_lst.append(new_member) #Add the person to the end of the roster list
+#
+# print(roster_lst) # print results
 
 
 # --- Slide 32 Application – Filtering a list
-people = ['Jack', 'Frank', 'Macy', 'Nancy', 'Bill']
+people = ['Jack', 'Frank', 'Yuriy', 'Macy', 'Nancy', 'Bill', 'Jason', 'May']
 
-revised_people = []
+second_a = []
+at_least_5 = []
 
-pass
+"""
+Your task
+    1) Print a new list with only the people who have ‘a’ as the second letter in their name.
+    2) Print ANOTHER new list with people whose name has 5 or more characters in it
+"""
+# for person in people:
+#     if person[1] == 'a':
+#         second_a.append(person)
+#
+#     if len(person) >= 5:
+#         at_least_5.append(person)
+#
+# print(second_a)
+# print(at_least_5)
+
 
 
 # --- Slide 33 Whole list operations
@@ -462,39 +477,59 @@ pass
 #     lst.append(randint(1, 100))
 #
 # print(lst)
-
-pass
-
-
-# --- Slide 34 Skill Review – Getting Input until break
-##Stopping a loop when the 'enter' key is pressed.
-pass
+#
+# print(max(lst))
+# print(min(lst))
+# print(sum(lst))
+#
+# mean = sum(lst)/len(lst)
+# print(mean)
 
 
 
 
 # --- Slide 36 Replacing and Removing Elements
-lst= [1,2,3,4]
-pass
-
-
+# lst = [1,2,3,4]
+#
+# lst[0] = 'hello'
+# print(lst)
+#
+# lst[-1] = 1000
+# print(lst)
+#
+# n = lst.pop()
+# print(lst)
+# print(n)
+#
+# n2 = lst.pop(1)
+# print(lst)
 
 # --- Slide 37 Manipulating List Elements With Loops
 """
 Square each integer in the list and overwrite the original in that position
 """
-numbers = [2,3,4,5]
-pass
+
+# numbers = [2,3,4,5,6,7]
+#
+# for i in range(len(numbers)):
+#     numbers[i] = numbers[i] ** 2
+# print(numbers)
+
+
 
 
 """
 Remove the space character and capitalize the first letter of each name
 """
-names = ["  alice", "bob  ", "  charlie  "]
-cleaned_names = []
-
-pass
-
+# names = ["  alice smith", "bob  ", "  charlie  "]
+# cleaned_names = []
+#
+# for name in names:
+#     clean_name = name.strip()
+#     clean_name = clean_name.title()
+#     cleaned_names.append(clean_name)
+#
+# print(cleaned_names)
 
 
 
@@ -506,8 +541,9 @@ By default, it sorts the list from low to high.
 
 This is called sort-in-place because it changes the original lsit so we cannot reference it in the original (unsorted) way anymore
 """
-pass
-
+# high_NFL_scores.sort()
+# print(high_NFL_scores)
+#
 
 
 """
@@ -517,17 +553,19 @@ Notice that if we use the sorted() method, we get the orignal list with nothing 
 
 This happens because sorted() returns a NEW list that is sorted, leaving the orignal one intact. 
 In order to see it we need to save it to a variable.
-"""
-pass
-
-
-pass
+# """
+# high_scores = sorted(high_NFL_scores)
+# print(high_NFL_scores)
+#
+# print(high_scores)
+#
 
 
 """
 To sort in reverse we can add the 'reverse' parameter to our command. This works with both methods. 
 """
-pass
+# high_NFL_scores.sort(reverse = True)
+# print(high_NFL_scores)
 
 
 # --- Slide 39 Searching and Filtering
@@ -545,5 +583,13 @@ pass
 Task 2:
 Create a new list that has elements that show up at least twice on the original list 
 """
-pass
+high_NFL_scores = [99, 101, 95, 113, 98, 96, 105, 101, 97, 103, 95, 106, 99, 98, 96]
+
+repeats = []
+for score in high_NFL_scores:
+    if high_NFL_scores.count(score) >= 2:
+        if score not in repeats:
+            repeats.append(score)
+
+print(repeats)
 
