@@ -8,7 +8,8 @@
 
 # --- Slide 3 Tuples
 cards = ()  # Empty tuple container
-pass
+print(type(cards))
+
 
 
 # Get element info from a tuple (similar to lists and string)
@@ -212,15 +213,15 @@ pass  # This is okay because we reference a key
 
 
 # --- Slide 22 Adding and Removing Dictionary Entries
-cars = {'Ford':"Fusion", 'Toyota': "Camry", 'Jeep':"Wrangler"}
-cars["Honda"] = "Accord"
-print(cars)
-
-cars.pop("Toyota")
-print(cars)
-
-cars.pop("Ferrari")
-print(cars)
+# cars = {'Ford':"Fusion", 'Toyota': "Camry", 'Jeep':"Wrangler"}
+# cars["Honda"] = "Accord"
+# print(cars)
+#
+# cars.pop("Toyota")
+# print(cars)
+#
+# cars.pop("Ferrari")
+# print(cars)
 
 """
 Your turn 
@@ -319,21 +320,21 @@ pass  # Individually show each score that is read
 
 
 # --- Slide 36 Parsing data from a file
-f = open("myfile.txt", "r")
-lines = f.readlines()
-f.close()
+# f = open("myfile.txt", "r")
+# lines = f.readlines()
+# f.close()
 
 
 
-for line in lines:
-    pass
-    pass  # Separate name and score using the colon (:) as the seperator character
-    pass  # First item is the name
-    pass  # Convert score to an integer
+# for line in lines:
+pass
+pass  # Separate name and score using the colon (:) as the seperator character
+pass  # First item is the name
+pass  # Convert score to an integer
 
     #DEBUG INFO
-    pass  # Add score to running total
-    pass
+pass  # Add score to running total
+pass
 
 pass  # Calculate class average
 
@@ -346,11 +347,11 @@ Modify the myfile.txt program created earlier program to identify the student wi
 
     Print the name of the student and the score 
 """
-f = open("myfile.txt", "r")
-lines = f.readlines()
-f.close()
-
-
+# f = open("myfile.txt", "r")
+# lines = f.readlines()
+# f.close()
+#
+#
 
 
 # --- Slide 38 OS Module
