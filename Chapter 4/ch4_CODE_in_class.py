@@ -7,24 +7,38 @@
 """
 
 # --- Slide 3 Tuples
-cards = ()  # Empty tuple container
-print(type(cards))
+# cards = ()  # Empty tuple container
+# print(type(cards))
 
+# cards = (6,7, 'Ace')
+# cards_full = ((2, 'hearts'), (3, 'spades'))
+#
+# cars = ([2016, 'Ford', 'Fusion'], [2023, 'Toyota', 'Prius'])
 
 
 # Get element info from a tuple (similar to lists and string)
-pass
+# print(cards_full[1])
+# print(cards_full[1][1])
 
 
 # --- Demonstrates you can't modify a tuple like you can a list
+# cards[2] = 'King' # Can't change a tuple element
+# print(cars[0])
+# cars[0][2] = 'Model T'
+# print(cars)
+
+# cars[0] = ('Landrovee') # Can't change this
 
 
+# cards = list(cards) # If we change the cards tuple to a list we can manipulate elements
+# print(cards)
+# cards.append('King')
+# print(cards)
 
-
-pass # If we change the cards tuple to a list we can manipulate elements
-
-pass  # Since the third element [2] in the first tuple is a list, it can be modified. We are not modifying the tuple itself
-
+# cards = tuple(cards)
+# print(cards)
+#
+# print(hash(cards))
 
 
 # --- Slide 4 Tuple Quick task
@@ -51,42 +65,62 @@ pass
 # --- Slide 6 Tuple Application - Building a Card deck for a game
 import random
 
-suit_tuple = ('hearts', 'diamomds', 'spades', 'clubs')
-rank_tuple = ('2', '3', '4', '5', '6', '7', '8', '9', '10', 'jack', 'queen', 'king', 'ace')
+# suit_tuple = ('hearts', 'diamomds', 'spades', 'clubs')
+# rank_tuple = ('2', '3', '4', '5', '6', '7', '8', '9', '10', 'jack', 'queen', 'king', 'ace')
 
-deck = []
-for suit in suit_tuple:
-    for rank in rank_tuple:
-        pass  # Temporary variable to store the current card in loop
-        pass # Show the card for debugging
-        pass  # Add this card to the deck list
+# deck = []
+# for suit in suit_tuple:
+#     for rank in rank_tuple:
+#         card = (rank, suit) # Temporary variable to store the current card in loop
+#         # print(card) # Show the card for debugging
+#         deck.append(card)  # Add this card to the deck list
 
-
-
+# print(deck)
+# print(len(deck))
+#
+# random.shuffle(deck)
+# print(deck)
+#
+# print(random.choice(deck))
+# print(random.choices(deck, k=5))
 
 
 # --- Slide 8 Defining Functions
-pass
+# def greeting():
+#     print('Hi Everyone')
 
-pass # Call The function
+# greeting() # Call The function
+# greeting()
 
-pass  # Calling greeting without parenthesis (), does NOT run the function
-pass  # printing greeting without parenthesis, shows where the function is stored in computer memory
-pass  # Prints None because our function (greeting) does not return anything
+# greeting  # Calling greeting without parenthesis (), does NOT run the function
+# print(greeting)  # printing greeting without parenthesis, shows where the function is stored in computer memory
+# print(greeting())  # Prints None because our function (greeting) does not return anything
 
 
 
 # --- Slide 9 The return statement
+# def greeting():
+#     print('Hi everyone')
+#     return 'more stuff'
+    # print('goodbye') # return kills the function
 
+# greeting()  # Does not display anything
 
-
-pass  # Does not display anything
-
-pass  # Call the function and save what it returns to a variable
-
+# message = greeting()  # Call the function and save what it returns to a variable
+# print(message)
 
 
 # ANOTHER EXAMPLE
+# def add():
+#     a = 2
+#     b = 3
+#     return a + b # return 5 back to the main program
+#
+# answer = add()
+# print(answer)
+# print(answer ** 2) # prints 25
+
+# print(add())
 
 
 
@@ -94,17 +128,33 @@ pass  # Call the function and save what it returns to a variable
 
 
 # --- Slide 10 Defining Functions with POSITIONAL PARAMETERS
-
-
-
+# def greeting(first_name, last_name):
+#     print(first_name)
+#     return f"Hi {first_name} {last_name}, what's up?"
+#
+# my_greeting = greeting(3.1415926, 'Drubinskiy')
+# print(my_greeting)
 
 
 # --- Slide 11 Defining Functions with KEYWORD PARAMETERS
+def greeting(first_name = 'Jon', last_name = 'Doe'):
+    return f"Call me {last_name}, {first_name}, {last_name}"
 
+my_greeting = greeting()
+print(my_greeting)
 
+my_greeting = greeting(first_name='James')
+print(my_greeting)
 
+my_greeting = greeting(last_name='Bond', first_name='James')
+print(my_greeting)
 
+my_greeting = greeting(first_name='James', last_name='Bond')
+print(my_greeting)
 
+# my_greeting = greeting(first_name='James', 'Bond')
+my_greeting = greeting('James', last_name='Bond')
+print(my_greeting)
 
 # --- Slide 12 Defining Functions with positional AND keyword parameters
 
