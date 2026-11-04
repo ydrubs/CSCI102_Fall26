@@ -5,6 +5,7 @@
     - File Operations
     - OS Module (if time)
 """
+from PIL.Image import register_extension
 
 # --- Slide 3 Tuples
 # cards = ()  # Empty tuple container
@@ -137,27 +138,52 @@ import random
 
 
 # --- Slide 11 Defining Functions with KEYWORD PARAMETERS
-def greeting(first_name = 'Jon', last_name = 'Doe'):
-    return f"Call me {last_name}, {first_name}, {last_name}"
+# def greeting(first_name = 'Jon', last_name = 'Doe'):
+#     return f"Call me {last_name}, {first_name}, {last_name}"
+#
+# my_greeting = greeting()
+# print(my_greeting)
+#
+# my_greeting = greeting(first_name='James')
+# print(my_greeting)
+#
+# my_greeting = greeting(last_name='Bond', first_name='James')
+# print(my_greeting)
+#
+# my_greeting = greeting(first_name='James', last_name='Bond')
+# print(my_greeting)
+#
+# # my_greeting = greeting(first_name='James', 'Bond')
+# my_greeting = greeting('James', last_name='Bond')
+# print(my_greeting)
 
-my_greeting = greeting()
-print(my_greeting)
 
-my_greeting = greeting(first_name='James')
-print(my_greeting)
 
-my_greeting = greeting(last_name='Bond', first_name='James')
-print(my_greeting)
+"""
+The Answer is _____
+"""
+# def my_function():
+#     n = 67
+#     # return n + 3
+#     print(f"The answer is {n}")
+#     return 'something'
 
-my_greeting = greeting(first_name='James', last_name='Bond')
-print(my_greeting)
+# print(my_function()) # Returns 70
+# answer = my_function()
+# print(answer)
 
-# my_greeting = greeting(first_name='James', 'Bond')
-my_greeting = greeting('James', last_name='Bond')
-print(my_greeting)
 
 # --- Slide 12 Defining Functions with positional AND keyword parameters
+# def add(a, d, b = 4, c = 7):
+#     return a + b + c + d
+#
+# answer = add(a = 1, d = 3) # It will print 14
+# print(answer)
 
+"""
+IMPORTANT!
+POSITIONAL parameters HAVE TO come BEFORE KEYWORD parameters 
+"""
 
 
 
@@ -170,8 +196,19 @@ print(my_greeting)
 
 # --- Slide 13 Your Turn
 """
-Write a function called find_bigger that takes two float values as parameters and returns the larger of the two. 
+Write a function called find_bigger that takes two float values
+as parameters and returns the larger of the two. 
 """
+# def find_bigger(a, b):
+#     if a > b:
+#         return a
+#     return b
+#
+# n1 = float(input("Enter a decimal number: "))
+# n2 = float(input("Enter another decimal number: "))
+# print(find_bigger(n1, n2))
+
+
 
 
 
@@ -187,19 +224,35 @@ For example, if the string is pass123word the return value is password
 
 Hint: Use a string method you learned in the previous chapter
 """
-
-
-
-
+# def no_ints(my_string):
+#     new_string = ""
+#     for char in my_string:
+#         if not char.isdigit():
+#             new_string += char
+#
+#     return new_string
+#
+# result = no_ints('123hello123')
+# print(result)
 
 
 
 
 # --- slide 15 Function Application 2
 """
-Wrtie a function that accepts an integer and returns a list of its factors (integers divisisble by that number).
+Write a function called factors that accepts an integer and returns 
+a list of its factors (integers divisisble by that number).
 """
-
+# def factors(n):
+#     my_factors = []
+#     for i in range(1, n+1):
+#         if n % i == 0:
+#             my_factors.append(i)
+#
+#     return my_factors
+#
+# result = factors(20)
+# print(result)
 
 
 
