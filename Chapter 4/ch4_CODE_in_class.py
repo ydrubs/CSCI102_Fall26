@@ -259,24 +259,39 @@ a list of its factors (integers divisisble by that number).
 
 
 # --- Slide 18 The Dictionary Data Type
-pass  # Empty Dictionary we can add entries to
-pass  # Example dictionary of car makes and models
+cars =  {} # Empty Dictionary we can add entries to
+# print(type(cars))
 
+# cars = {'Ford' : "Fusion", 'Toyota' : 'Camry', 'Jeep': 'Wrangler', 'Tesla' : 'Model 3'}  # Example dictionary of car makes and models
 
-# Dictionary KEYS can be any IMMUTABLE data type (int, string, float, tuple), while VALUES can be of ANY type
-character = {
-    "names": ["Arin", "Luna", "Thorin"],
-    "races": ["Elf", "Human", "Dwarf"],
-    "classes": ["Wizard", "Rogue", "Fighter"],
-    "weapons": ["Staff", "Dagger", "Axe"]
-}
+# print(cars[0]) # Can't access dicitony using index ERROR
 
+# print(cars['Ford']) # Prints 'Fusion' -> Value
+#
+# print(len(cars))
+#
+# # Dictionary KEYS can be any IMMUTABLE data type (int, string, float, tuple), while VALUES can be of ANY type
+# character = {
+#     "names": ["Arin", "Luna", "Thorin"],
+#     "races": ["Elf", "Human", "Dwarf"],
+#     "classes": ["Wizard", "Rogue", "Fighter"],
+#     "weapons": ["Staff", "Dagger", "Axe"]
+# }
+#
+# print(character['names'])
+# print(character['names'][1])
+#
+# print(character['weapons'][2])# Print Axe
+# character['weapons'].append('whip')
+#
+# print(character)
 
 """
 What happens if a dictionary key is a mutable type such as a list?
 """
-# character = {["Arin", "Luna", "Thorin"] : 'names'}
-
+# character = {["Arin", "Luna", "Thorin"] : 'names'} # KEYS HAVE TO BE IMMUTABLE
+# character = {("Arin", "Luna", "Thorin") : 'names'}
+# print(character)
 
 
 # ---Slide 19 Your Turn
@@ -292,14 +307,19 @@ Create a dictionary to store your weekly activities with:
 For example, one entry could say: 
 	("Mon", "4 PM"): "Soccer Practice"
 """
-
+# my_activities = {("Mon", "4 PM"): "Soccer Practice", ('Wed', 11): "Programming class"}
 
 
 
 # --- Slide 20 Dictionaries Are Unordered
-pass #This gives an Error because we can't use indexes
+cars = {'Ford' : "Fusion", 'Toyota' : 'Camry', 'Jeep': 'Wrangler', 'Tesla' : 'Model 3'}
+# cars[1] #This gives an Error because we can't use indexes
 
-pass  # This is okay because we reference a key
+# print(cars['Toyota'])  # This is okay because we reference a key
+
+# print(cars['toyota'()]) # Prints ERROR
+
+# print(cars.get('Porche'))
 
 
 
@@ -307,6 +327,7 @@ pass  # This is okay because we reference a key
 # fords = {'Ford': 'Mustang', 'Ford': 'Fusion', 'Ford': 'F150'}
 
 # print(fords)  # Only returns ('Ford': 'F150')
+# print(len(fords))
 
 
 # BETTER
@@ -316,15 +337,20 @@ pass  # This is okay because we reference a key
 
 
 # --- Slide 22 Adding and Removing Dictionary Entries
-# cars = {'Ford':"Fusion", 'Toyota': "Camry", 'Jeep':"Wrangler"}
-# cars["Honda"] = "Accord"
+cars = {'Ford':"Fusion", 'Toyota': "Camry", 'Jeep':"Wrangler"}
+cars["Honda"] = "Accord"
+print(cars)
+
+cars.pop('Toyota')
+print(cars)
+
+# cars.pop("Ferrari") # ERROR
 # print(cars)
-#
-# cars.pop("Toyota")
-# print(cars)
-#
-# cars.pop("Ferrari")
-# print(cars)
+
+if cars.get('Ferrari') != None:
+    cars.pop('Ferrari')
+else:
+    print('Brokey')
 
 """
 Your turn 
@@ -332,6 +358,13 @@ Your turn
     2) Remove Jeep Wrangler from the list and print a message saying that it was purchased 
        (Save the pop to a varaible). 
 """
+cars['Chevy'] = 'Camaro'
+print(cars)
+
+new_car_make = input('Enter a car make to remove: ')
+new_car_model = cars.pop(new_car_make)
+
+print(f'You bought a {new_car_make} {new_car_model}')
 
 # --- Slide 23 Getting all keys and values in a dictionary
 pass  # Use the .keys method to see all the .keys in a given dictionary
