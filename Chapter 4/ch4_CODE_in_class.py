@@ -337,48 +337,68 @@ cars = {'Ford' : "Fusion", 'Toyota' : 'Camry', 'Jeep': 'Wrangler', 'Tesla' : 'Mo
 
 
 # --- Slide 22 Adding and Removing Dictionary Entries
-cars = {'Ford':"Fusion", 'Toyota': "Camry", 'Jeep':"Wrangler"}
-cars["Honda"] = "Accord"
-print(cars)
-
-cars.pop('Toyota')
-print(cars)
+# cars = {'Ford':"Fusion", 'Toyota': "Camry", 'Jeep':"Wrangler"}
+# cars["Honda"] = "Accord"
+# print(cars)
+#
+# cars.pop('Toyota')
+# print(cars)
 
 # cars.pop("Ferrari") # ERROR
 # print(cars)
 
-if cars.get('Ferrari') != None:
-    cars.pop('Ferrari')
-else:
-    print('Brokey')
+# if cars.get('Ferrari') != None:
+#     cars.pop('Ferrari')
+# else:
+#     print('Brokey')
 
 """
 Your turn 
     1) Add Chevy Camaro to the list
     2) Remove Jeep Wrangler from the list and print a message saying that it was purchased 
        (Save the pop to a varaible). 
-"""
-cars['Chevy'] = 'Camaro'
-print(cars)
-
-new_car_make = input('Enter a car make to remove: ')
-new_car_model = cars.pop(new_car_make)
-
-print(f'You bought a {new_car_make} {new_car_model}')
+# """
+# cars['Chevy'] = 'Camaro'
+# print(cars)
+#
+# new_car_make = input('Enter a car make to remove: ')
+# new_car_model = cars.pop(new_car_make)
+#
+# print(f'You bought a {new_car_make} {new_car_model}')
 
 # --- Slide 23 Getting all keys and values in a dictionary
-pass  # Use the .keys method to see all the .keys in a given dictionary
+characters = {
+    "warrior": ("HP", 100),
+    "wizard": ("HP", 60),
+    "archer": ("HP", 80),
+    "rogue": ("HP", 65),
+    "paladin": ("HP", 110),
+    "bard": ("HP", 55),
+    "ranger": ("HP", 75)
+}
 
-pass  # Use the .values method to see all the values in a given dictionary
+print(characters.keys()) # Use the .keys method to see all the .keys in a given dictionary
 
-pass  # Use the .items method to see all the key-value pairs in a dictionary as tuples
+print(characters.values())  # Use the .values method to see all the values in a given dictionary
+
+print(characters.items())  # Use the .items method to see all the key-value pairs in a dictionary as tuples
 
 # --- Slide 24 Looping over dictionary entries
-pass
+for key in characters.keys():
+    # print(key)
+    if key == 'archer':
+        print("Boom you shot an arrow")
 
 
+for value in characters.values():
+    print(value[1])
 
 
+for both in characters.items():
+    print(both[0], both[1][1])
+
+for k, v in characters.items():
+    print(k, v[1])
 
 # --- Slide 25 You Try 1
 """
@@ -398,7 +418,15 @@ characters = {
     "ranger": ("HP", 75)
 }
 
+for value in characters.values():
+    # print(value)
+    if value[1] > 70:
+        print(value)
+        # PROBLEM: YOU LOSE KEYS
 
+for key, value in characters.items():
+    if value[1] > 70:
+        print(key)
 
 
 

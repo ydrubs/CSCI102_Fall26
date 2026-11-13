@@ -10,6 +10,7 @@ words = {
     "number": None
 }
 
+
 '''
 Task: Write a loop that goes through each key in the dictionary and asks
 the user to enter a word or phrase related to that key.
@@ -33,8 +34,11 @@ HINT: You can use an f-string in your input command
 '''
 
 ## YOUR CODE HERE
+for key in words.keys():
+    entry = input(f"Please enter a {key}: ")
+    words[key] = entry
 
-
+print(words)
 
 story = f"""
 === THE DUNGEON OF DOOM ===
