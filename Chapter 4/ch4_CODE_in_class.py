@@ -377,28 +377,28 @@ characters = {
     "ranger": ("HP", 75)
 }
 
-print(characters.keys()) # Use the .keys method to see all the .keys in a given dictionary
-
-print(characters.values())  # Use the .values method to see all the values in a given dictionary
-
-print(characters.items())  # Use the .items method to see all the key-value pairs in a dictionary as tuples
+# print(characters.keys()) # Use the .keys method to see all the .keys in a given dictionary
+#
+# print(characters.values())  # Use the .values method to see all the values in a given dictionary
+#
+# print(characters.items())  # Use the .items method to see all the key-value pairs in a dictionary as tuples
 
 # --- Slide 24 Looping over dictionary entries
-for key in characters.keys():
-    # print(key)
-    if key == 'archer':
-        print("Boom you shot an arrow")
-
-
-for value in characters.values():
-    print(value[1])
-
-
-for both in characters.items():
-    print(both[0], both[1][1])
-
-for k, v in characters.items():
-    print(k, v[1])
+# for key in characters.keys():
+#     # print(key)
+#     if key == 'archer':
+#         print("Boom you shot an arrow")
+#
+#
+# for value in characters.values():
+#     print(value[1])
+#
+#
+# for both in characters.items():
+#     print(both[0], both[1][1])
+#
+# for k, v in characters.items():
+#     print(k, v[1])
 
 # --- Slide 25 You Try 1
 """
@@ -408,25 +408,25 @@ Each value is a tuple containing "HP" and the character's health.
 
 Use a for loop and conditional to print the class (key) of every character class whose HP is greater than 70.
 """
-characters = {
-    "warrior": ("HP", 100),
-    "wizard": ("HP", 60),
-    "archer": ("HP", 80),
-    "rogue": ("HP", 65),
-    "paladin": ("HP", 110),
-    "bard": ("HP", 55),
-    "ranger": ("HP", 75)
-}
-
-for value in characters.values():
-    # print(value)
-    if value[1] > 70:
-        print(value)
-        # PROBLEM: YOU LOSE KEYS
-
-for key, value in characters.items():
-    if value[1] > 70:
-        print(key)
+# characters = {
+#     "warrior": ("HP", 100),
+#     "wizard": ("HP", 60),
+#     "archer": ("HP", 80),
+#     "rogue": ("HP", 65),
+#     "paladin": ("HP", 110),
+#     "bard": ("HP", 55),
+#     "ranger": ("HP", 75)
+# }
+#
+# for value in characters.values():
+#     # print(value)
+#     if value[1] > 70:
+#         print(value)
+#         # PROBLEM: YOU LOSE KEYS
+#
+# for key, value in characters.items():
+#     if value[1] > 70:
+#         print(key)
 
 
 
@@ -449,19 +449,27 @@ l2 = [1, 2, 3]
 
 
 # --- Slide 30 Writing Text to a file
-pass  # Open file in write mode
-
-pass  # Write first record and start a new line
-pass  # Write second record and start a new line
-pass  # Write final record
-
-pass  # Close the file
-
+# f = open("myfile.txt", 'w')  # Open file in write mode
+#
+# f.write("Alex: 95\n")  # Write first record and start a new line
+# f.write("Jordan: 87\n")  # Write second record and start a new line
+# f.write("Taylor: 92\n")  # Write final record
+#
+# f.close()  # Close the file
 
 
 
 
 # --- Slide 33 Writing Numbers to a file
+# import random
+#
+# f = open('random_numbers', 'w')
+#
+# for count in range(100):
+#     number = random.randint(1,500)
+#     f.write(str(number) + '\n')
+#
+# f.close()
 
 
 
@@ -469,26 +477,37 @@ pass  # Close the file
 
 
 # --- Slide 34 Reading Text from a file
-
-
-
-pass  # Writes each line into a list
-pass
-
-
-
-
-pass  # Individually show each score that is read
-
-
+# f = open('myfile.txt', 'r')
+#
+# lines_list = f.readlines()  # Writes each line into a list
+# f.close()
+#
+# print(lines_list)
+# print(lines_list[1])
+# print(lines_list[1][-2])
+# for line in lines_list:
+#     print(line, end = "")
+#
 
 
 # --- Slide 36 Parsing data from a file
-# f = open("myfile.txt", "r")
-# lines = f.readlines()
-# f.close()
+f = open("myfile.txt", "r")
+lines = f.readlines()
+f.close()
 
+total = 0
 
+# print(lines)
+for line in lines:
+    # print(line)
+    data = line.split(':')
+    # print(data[0])
+    # print(data[1])
+
+    score = int(data[1])
+    total +=score
+
+print(total/len(lines))
 
 # for line in lines:
 pass
@@ -511,11 +530,27 @@ Modify the myfile.txt program created earlier program to identify the student wi
 
     Print the name of the student and the score 
 """
-# f = open("myfile.txt", "r")
-# lines = f.readlines()
-# f.close()
-#
-#
+
+f = open("myfile.txt", "r")
+lines = f.readlines()
+f.close()
+
+high_score = 0 # Keep track of high score
+name_high = '' # Keep track of name for high score
+
+
+for line in lines:
+
+    data = line.split(":")  # Separate name and score using the colon (:) as the seperator character
+    score = int(data[1])
+
+    if score > high_score: # Check if the current score is higher then the previous
+        high_score = score # if it is store the score
+        name_high = data[0] # and the name to go with it
+
+print(f"{name_high} had the highscore of {high_score}.") # Display result for high score
+
+
 
 
 # --- Slide 38 OS Module
